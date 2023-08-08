@@ -12,7 +12,7 @@ html {
 header {
   position: fixed;
   width: 100%;
-  background-color: #14110f;
+  background-color:transparent;
   padding: 3rem 5rem;
 }
 nav {
@@ -58,8 +58,7 @@ h1 {
   font-size: 3em;
   margin-bottom: 10px;
   color: rgb(255, 255, 255);
-  -webkit-text-stroke:0.25px;
-  -webkit-text-stroke-color: #14110f;
+
 }
 
 h2 {
@@ -69,6 +68,8 @@ h2 {
 }
 h3{
   font-size: 1.4rem;
+  -webkit-text-stroke:0.1px;
+  -webkit-text-stroke-color: #14110f;
 }
 
 #ham-menu {
@@ -79,16 +80,20 @@ nav ul.active {
 }
 #video-m {
   position: fixed;
-  background-size: cover;
   min-width: 100%; /* Couvre toute la largeur de l'écran */
   min-height: 100%; /* Couvre toute la hauteur de l'écran */
   z-index: -1; /* Met la vidéo en arrière-plan */
 }
 #accueil h1 {
   font-size: 3.5rem;
-  margin-bottom: 10px;
-  color: rgb(255, 255, 255);
+  margin-bottom: 10px; 
+  -webkit-text-stroke:0.25px;
+  -webkit-text-stroke-color: #14110f;
 }
+#contact h1 {
+  -webkit-text-stroke:0px;
+}
+
 p {
   font-size: 1.8rem;
   color: #fff;
@@ -100,8 +105,16 @@ section#competences{
   display: grid;
   justify-items:center ;
   align-content: center;
-
+  align-items: center;
+  -webkit-text-stroke:0.25px;
+  -webkit-text-stroke-color: #14110f;
 }
+
+#color a{
+  -webkit-text-stroke:0.25px;
+  -webkit-text-stroke-color: #14110f;
+}
+
 .skill {
   color: #faf8f8;
   margin-bottom: 10px; 
@@ -159,6 +172,9 @@ form {
   border-color: #fff;
   border-style: solid;
   border-radius:30px;
+  backdrop-filter:blur(5px);
+  text-decoration-color: #fff;
+  z-index: -1;
 }
 
 label {
@@ -173,11 +189,13 @@ label {
 input[type="text"],
 input[type="email"]
  {
+  background: transparent;
   padding: 10px;
   margin: 10px;
   border: 1px solid #ccc;
   border-radius: 3px;
   height: 50%;
+  color:#fff;
 }
 input[type="submit"]{
   padding: 10px;
@@ -185,7 +203,7 @@ input[type="submit"]{
   border: 1px solid #ccc;
   border-radius: 3px;
   justify-items: center;
-  background-color: #14110f;
+  background-color:transparent;
   color:#fff ;
   font-weight:500;
 }
@@ -199,22 +217,26 @@ input[type="submit"]{
 }
 
 .grid-item {
-  background-color: #f7f7f7;
+  background-color:transparent;
   padding: 60px;
   margin: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-style: solid;
+  border-color: #fff;
+  color:#fff;
+  backdrop-filter: blur(5px);
+  z-index: -1;
+
   font-size: 1.8rem; 
 }
 .grid-item a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .sidebar {
   background-color: transparent;
   padding: 0px;
   border-radius: 5px;
-  
 }
 
 .social-links {
@@ -222,7 +244,8 @@ input[type="submit"]{
   padding: 0; 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap:20px;
+
 }
 
 .social-links li {
@@ -236,7 +259,10 @@ display: flex;
   font-size: 18px;
   text-decoration: none;
   transition: color 0.3s ease; 
-  font-size: 1rem;  
+  font-size: 1.4rem;  
+  -webkit-text-stroke:0.5px;
+  -webkit-text-stroke-color: #14110f;
+
 }
 
 .social-links a:hover {
@@ -255,7 +281,6 @@ display: flex;
     width: 50%;
   }
   .grid-item {
-    background-color: #f7f7f7;
     padding: 30px;
     margin: 20px;
     font-size: 1.8rem; 
@@ -266,6 +291,10 @@ display: flex;
     font-size: 1.8rem;
       width: 100%;
   }
+  section#competences{
+   justify-content: center; 
+  }
+  
 
 }
 @media only screen and (max-width: 767px) {
@@ -282,9 +311,14 @@ display: flex;
   nav a#logo,
   #ham-menu {
     font-size: 3.2rem;
+    -webkit-text-stroke:0.5px;
+    -webkit-text-stroke-color: #14110f;
+
   }
+
   nav ul {
-    background-color: #7e7f83;
+    background-color:transparent;
+    backdrop-filter: blur(20px);
     position: fixed;
     left: -100vw;
     top: 64.6px;
