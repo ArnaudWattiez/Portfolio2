@@ -36,9 +36,14 @@ nav a#logo {
 nav ul a {
   color: #ffffff;
   font-weight: 600;
+  z-index: 6;
+  overflow:hidden;
+
 }
 nav ul a:hover {
   border-bottom: 2px solid #ffffff;
+    overflow:hidden;
+
 }
 
 section#accueil,
@@ -51,8 +56,6 @@ section#projets{
   justify-items:center ;
   align-content: center;
   justify-content: center;
-  overflow: hidden;
-  background-size: cover;
 }
 h1 {
   font-size: 3em;
@@ -82,7 +85,7 @@ nav ul.active {
   position: fixed;
   min-width: 100%; /* Couvre toute la largeur de l'écran */
   min-height: 100%; /* Couvre toute la hauteur de l'écran */
-  z-index: -1; /* Met la vidéo en arrière-plan */
+  z-index: -4; /* Met la vidéo en arrière-plan */
 }
 #accueil h1 {
   font-size: 3.5rem;
@@ -172,9 +175,7 @@ form {
   border-color: #fff;
   border-style: solid;
   border-radius:30px;
-  backdrop-filter:blur(5px);
-  text-decoration-color: #fff;
-  z-index: -1;
+
 }
 
 label {
@@ -196,6 +197,7 @@ input[type="email"]
   border-radius: 3px;
   height: 50%;
   color:#fff;
+  text-decoration-color: #fff;
 }
 input[type="submit"]{
   padding: 10px;
@@ -224,9 +226,6 @@ input[type="submit"]{
   border-style: solid;
   border-color: #fff;
   color:#fff;
-  backdrop-filter: blur(5px);
-  z-index: -1;
-
   font-size: 1.8rem; 
 }
 .grid-item a {
@@ -286,14 +285,14 @@ display: flex;
     font-size: 1.8rem; 
   }
   #grid-item {    
-    padding: 5px;
-    margin: 20px;
-    font-size: 1.8rem;
       width: 100%;
   }
   section#competences{
    justify-content: center; 
   }
+header #logo a{
+  -webkit-text-stroke: 0px;
+}
   
 
 }
@@ -311,10 +310,16 @@ display: flex;
   nav a#logo,
   #ham-menu {
     font-size: 3.2rem;
-    -webkit-text-stroke:0.5px;
-    -webkit-text-stroke-color: #14110f;
 
   }
+  #color #ham-menu{
+  -webkit-text-stroke:0.5px;
+  -webkit-text-stroke-color: #14110f;
+  }
+  nav a{
+    font-size: 1.8em;
+  }
+
 
   nav ul {
     background-color:transparent;
@@ -323,16 +328,17 @@ display: flex;
     left: -100vw;
     top: 64.6px;
     width: 100vw;
-    height: calc(100vh - 65.6px);
+    height: calc(100vh - 64.6px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     transition: 1s;
     gap: 0;
-    z-index: 2;
+    overflow: hidden;
+    
   } 
-  
+
   #grid-item {    
     padding: 30px;
     margin: 20px;
@@ -375,6 +381,7 @@ display: flex;
     border-color: #fff;
     border-style: solid;
     border-radius:5px;
+  
   }
   input[type="submit"]{
     font-size: 1.2em;

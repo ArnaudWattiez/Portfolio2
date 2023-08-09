@@ -11,6 +11,7 @@ navLinks.forEach((navLinks) => {
     hamMenuIcon.classList.toggle("fa-times");
   });
 });
+
 function ouvrirMessagerie() {
   // Récupérer les valeurs du formulaire
   const nom = document.getElementById('nom').value;
