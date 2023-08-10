@@ -14,35 +14,39 @@ header {
   width: 100%;
   background-color:transparent;
   padding: 3rem 5rem;
+  z-index:1000;
 }
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+font-size: 1.8em;
+  
 }
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
 }
 nav a {
   font-size: 1.4rem;
   text-decoration: none;
+  padding: 10px;
 }
 nav a#logo {
   color: #fcfafa;
   font-weight: 700;
+  font-size: 1.4em;
 }
 nav ul a {
   color: #ffffff;
   font-weight: 600;
-  z-index: 6;
-  overflow:hidden;
+  font-size: 1em;
 
 }
 nav ul a:hover {
   border-bottom: 2px solid #ffffff;
     overflow:hidden;
+  
 
 }
 
@@ -61,7 +65,7 @@ h1 {
   font-size: 3em;
   margin-bottom: 10px;
   color: rgb(255, 255, 255);
-
+z-index: 2;
 }
 
 h2 {
@@ -69,11 +73,11 @@ h2 {
   margin-bottom: 20px;
   color: #fff;
 }
-h3{
+ h3{
   font-size: 1.4rem;
   -webkit-text-stroke:0.1px;
   -webkit-text-stroke-color: #14110f;
-}
+}  
 
 #ham-menu {
   display: none;
@@ -85,13 +89,11 @@ nav ul.active {
   position: fixed;
   min-width: 100%; /* Couvre toute la largeur de l'écran */
   min-height: 100%; /* Couvre toute la hauteur de l'écran */
-  z-index: -4; /* Met la vidéo en arrière-plan */
+  z-index:1; /* Met la vidéo en arrière-plan */
 }
 #accueil h1 {
   font-size: 3.5rem;
   margin-bottom: 10px; 
-  -webkit-text-stroke:0.25px;
-  -webkit-text-stroke-color: #14110f;
 }
 #contact h1 {
   -webkit-text-stroke:0px;
@@ -102,6 +104,7 @@ p {
   color: #fff;
   padding: 20px;
   line-height: 1.6;
+  z-index: 13;
 }
 section#competences{
   height: 100vh;
@@ -131,6 +134,7 @@ section#competences{
   border-radius: 5px;
   overflow: hidden;
 
+
 }
 .skill-progress {
   background-color: #34312d;
@@ -146,25 +150,35 @@ section#competences{
   justify-items: center;
   align-items: center;
   width: 100%;
+  z-index: 9;
 }
 
 #grid-item {
   padding: 20px;
   border-radius: 5px;
   width: 100%;
+
 }
 
 img{
   height: 100%;
   width: 50%;
   margin-bottom: 10;
-
+z-index:10
 }
 #grid-item img {
   height: 50%;
   width: 50%;
   border-radius: 5px;
   image-rendering: auto;
+  ;
+}
+
+#background{
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index:3 ;
+
 }
 
 form {
@@ -175,7 +189,6 @@ form {
   border-color: #fff;
   border-style: solid;
   border-radius:30px;
-
 }
 
 label {
@@ -185,19 +198,23 @@ label {
   color:#fff ;
   font-size: 1.4em;
   text-align:center ;
+
 }
+
 
 input[type="text"],
 input[type="email"]
  {
+  border: none;
   background: transparent;
   padding: 10px;
   margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
   height: 50%;
   color:#fff;
   text-decoration-color: #fff;
+  border-color: #fff;
+  border: 1px solid  ;
+  z-index: 4;
 }
 input[type="submit"]{
   padding: 10px;
@@ -216,6 +233,8 @@ input[type="submit"]{
   grid-gap: 20px; /* Espace entre les cellules de la grille */
   padding: 20px;
   text-decoration: none;
+  z-index: 12;
+ 
 }
 
 .grid-item {
@@ -226,7 +245,8 @@ input[type="submit"]{
   border-style: solid;
   border-color: #fff;
   color:#fff;
-  font-size: 1.8rem; 
+  font-size: 1.8rem;  
+  backdrop-filter: blur(10px);
 }
 .grid-item a {
   text-decoration: none;
@@ -235,7 +255,8 @@ input[type="submit"]{
 .sidebar {
   background-color: transparent;
   padding: 0px;
-  border-radius: 5px;
+  border-radius: 5px; 
+  
 }
 
 .social-links {
@@ -244,12 +265,14 @@ input[type="submit"]{
   display: flex;
   flex-direction: row;
   gap:20px;
+  
+
 
 }
 
 .social-links li {
   margin-bottom: 10px; 
-
+  z-index: 19;
 }
 
 .social-links a {
@@ -259,9 +282,12 @@ display: flex;
   text-decoration: none;
   transition: color 0.3s ease; 
   font-size: 1.4rem;  
+
+
+}
+#competences .social-links a{
   -webkit-text-stroke:0.5px;
   -webkit-text-stroke-color: #14110f;
-
 }
 
 .social-links a:hover {
@@ -310,7 +336,6 @@ header #logo a{
   nav a#logo,
   #ham-menu {
     font-size: 3.2rem;
-
   }
   #color #ham-menu{
   -webkit-text-stroke:0.5px;
